@@ -1,0 +1,56 @@
+﻿<Window x:Class="LAB9.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB9.WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="0,90,309,264">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="1" Name="AddStudent" Content="Add Student" FontSize="15" Click="MainAddStudentClick"></Button>
+            <Button Grid.Column="1" Grid.Row="1" Name="RemoveStudent" Content="Remove Student" FontSize="15" Click="MainRemoveButtonStudentClick"></Button>
+            <Button Grid.Column="2" Grid.Row="1" Name="MainAddGrade" Content="Add Grade" FontSize="15" Click="MainAddGradeToStudentClick"></Button>
+        </Grid>
+        <Grid Margin="496,10,10,264">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Close Stream"></Button>
+            <Button Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Content="Load another student"></Button>
+            <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Content="Load from txt (Stream)" ></Button>
+            <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Content="Save to txt file" Click="MainSaveToTxtClick"></Button>
+            <Button Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Content="Load from txt file" Click="MainLoadFromTxtClick"></Button>
+            <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Save to XML file" Click="MainSaveToXMLClick"></Button>
+            <Button Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Content="Load from XML file" Click="MainLoadFromXMLClick"></Button>
+            <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Content="Save to JSON file" Click="MainSaveToJSONClick"></Button>
+            <Button Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Content="Load from JSON file" Click="MainLoadFromJSONClick"></Button>
+        </Grid>
+        <Grid Margin="0,170,0,0">
+            <DataGrid Name="DataGridTable" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="FirstName" Binding="{Binding Path = FirstName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="LastName" Binding="{Binding Path= LastName}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Faculty" Binding="{Binding Path= Faculty}" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Index" Binding="{Binding Path= Index}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Grades" Binding="{Binding Path= Grades}" ></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

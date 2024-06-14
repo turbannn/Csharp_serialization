@@ -1,0 +1,29 @@
+﻿<Window x:Class="LAB9.WpfApp.AddGrade"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB9.WpfApp"
+        mc:Ignorable="d"
+        Title="AddGrade" Height="200" Width="200">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="AddGradeTextBlock" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">
+                Grade:
+            </TextBlock>
+            <TextBox Name="AddGradeTB" Grid.ColumnSpan="2" Grid.Column="1" BorderBrush="DarkGray" Width="120" Height="50" BorderThickness="1" FontSize="20"/>
+            <Button Name="AddGradeButton" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Width="150" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Click="AddButtonGradeClick">
+                Add Grade
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

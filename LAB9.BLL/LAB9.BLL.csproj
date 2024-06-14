@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LAB9.WpfApp">
+      <HintPath>..\LAB9.WpfApp\obj\Debug\net8.0-windows\LAB9.WpfApp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
